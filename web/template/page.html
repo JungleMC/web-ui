@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+    <link href="/static/bootstrap-5.1.0-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/static/css/sidebar.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<main>
+    <div class="d-flex align-items-start flex-column flex-shrink-0 bg-dark" style="width: 280px;">
+        <a href="/"
+           class="m-3 mb-0 d-flex align-items-center text-white text-decoration-none text-center">
+            <img src="/static/svg/logo.svg" class="jt-logo me-3">
+            <span class="fs-4">JungleTree</span>
+        </a>
+        <hr>
+        <nav class="nav flex-column nav-pills text-start align-self-center mb-auto w-100 ps-2 pe-1">
+            <a class="nav-link active" aria-current="page" href="#">
+                <span class="mdi mdi-chart-areaspline-variant align-middle ms-1 me-2"></span>
+                <span class="align-middle">Dashboard</span>
+            </a>
+            <a class="nav-link" href="#">
+                <span class="mdi mdi-account-circle align-middle ms-1 me-2"></span>
+                <span class="align-middle">Players</span>
+            </a>
+        </nav>
+        <hr>
+        <div class="dropdown p-2 ms-2 me-2 mb-3">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+               id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/Ella-Fox.png" alt="" width="32" height="32"
+                     class="rounded-circle ms-1 me-3">
+                <strong>Ella Fox</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow mb-1" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#"><span class="mdi mdi-account me-2"></span>Profile</a></li>
+                <li><a class="dropdown-item" href="#"><span class="mdi mdi-cog me-2"></span>Preferences</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="jt-divider"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between mt-4 mb-3 me-3 ms-3 border-bottom">
+                    <h2 class="h2">Dashboard</h2>
+                    <h3 class="h4">Players: {{ .Players }} / 20</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <canvas class="w-auto" id="myChart"></canvas>
+            </div>
+            <div class="col-3">
+                <div class="card me-4">
+                    <div class="card-header">Last Seen</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ella_Fox</li>
+                        <li class="list-group-item">MangoMlem</li>
+                        <li class="list-group-item">Octobot</li>
+                        <li class="list-group-item">ilmango</li>
+                    </ul>
+                    <div class="card-body text-end">
+                        <a href="#" class="btn btn-outline-primary">More...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/static/bootstrap-5.1.0-dist/js/bootstrap.bundle.js"></script>
+<script src="/static/js/sidebar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="/static/js/dashboard.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+</body>
+</html>
